@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <title>WeH Home Page</title>
+  </head>
+  <body>
+    <div class="transparent-bx" id="transparentBg"></div>
+    <!--Header -->
+    <header>
+      <div class="logo">
+        <a href="/">
+          <img src="/assets/images/weh-logo.svg" />
+        </a>
+      </div>
+
+      <div class="nav-bar-wrapper">
+        <ul class="nav">
+          <li>
+            <a href="#" onclick="scrollIntoSection('basicInfo')"
+              >Basic Information</a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="scrollIntoSection('geography')">Geography</a>
+          </li>
+          <li>
+            <a href="#" onclick="scrollIntoSection('demographics')"
+              >Demographics</a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="scrollIntoSection('demographics')"
+              >Government and Politics</a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="scrollIntoSection('miscellaneous')"
+              >Miscellaneous</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!--Banner-->
+    <div class="banner-wrapper">
+      <div class="search-box">
+        <h3>Search Country</h3>
+        <form class="search-form" autocomplete="off">
+          <input
+            id="countryInput"
+            type="text"
+            placeholder="Enter country name"
+          />
+          <button class="search-btn" type="submit">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="64"
+              height="64"
+              viewBox="0 0 64 64"
+              fill="none"
+            >
+              <g clip-path="url(#clip0_9_26)">
+                <path
+                  d="M46.9707 41.3705C50.8439 36.0852 52.5786 29.5324 51.8279 23.023C51.0772 16.5137 47.8963 10.5278 42.9217 6.26297C37.9472 1.99814 31.5457 -0.231135 24.998 0.0211579C18.4504 0.273451 12.2394 2.9887 7.60775 7.62368C2.97608 12.2587 0.265278 18.4716 0.0176706 25.0194C-0.229937 31.5672 2.00391 37.9671 6.27231 42.9386C10.5407 47.9102 16.5289 51.0867 23.0388 51.8328C29.5487 52.5789 36.1002 50.8394 41.3827 46.9625H41.3787C41.4987 47.1225 41.6267 47.2745 41.7707 47.4225L57.1707 62.8225C57.9207 63.573 58.9382 63.9949 59.9993 63.9953C61.0604 63.9956 62.0781 63.5745 62.8287 62.8245C63.5793 62.0744 64.0011 61.057 64.0015 59.9959C64.0019 58.9348 63.5807 57.917 62.8307 57.1665L47.4307 41.7665C47.2877 41.6217 47.1339 41.492 46.9707 41.3705ZM48.0027 25.9945C48.0027 28.8835 47.4336 31.7443 46.328 34.4135C45.2224 37.0827 43.6019 39.5079 41.559 41.5508C39.5162 43.5937 37.0909 45.2142 34.4217 46.3198C31.7526 47.4254 28.8918 47.9945 26.0027 47.9945C23.1136 47.9945 20.2528 47.4254 17.5836 46.3198C14.9145 45.2142 12.4892 43.5937 10.4463 41.5508C8.40344 39.5079 6.78293 37.0827 5.67733 34.4135C4.57172 31.7443 4.00268 28.8835 4.00268 25.9945C4.00268 20.1597 6.32053 14.5639 10.4463 10.4381C14.5721 6.3123 20.1679 3.99445 26.0027 3.99445C31.8374 3.99445 37.4332 6.3123 41.559 10.4381C45.6848 14.5639 48.0027 20.1597 48.0027 25.9945Z"
+                  fill="white"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_9_26">
+                  <rect width="64" height="64" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+        </form>
+        <h4>
+          Discover the World: Explore Countries with our Country Search Tool
+        </h4>
+      </div>
+    </div>
+
+    <!--Section 1-->
+    <section class="section" id="basicInfo">
+      <h2 class="heading">Basic Informatiotn</h2>
+      <p class="short-description color-dark">
+        Explore the foundation of our subject matter, delving into its core
+        details. Uncover key facts, historical background, and essential details
+        that lay the groundwork for a comprehensive understanding.
+      </p>
+      <div class="section-flex-box">
+        <div class="section-item">
+          <h4 class="sub-heading" id="countryName">India</h4>
+          <div class="flag-thumnail">
+            <img src="/assets/images/india-flag.png" />
+          </div>
+        </div>
+        <div class="section-content-item">
+          <p><span>Country Name -</span> <span>Republic of India</span></p>
+          <p><span>Capital -</span> <span>New Delhi</span></p>
+          <p><span>Population -</span> <span>1380004385</span></p>
+          <p><span>Area -</span> <span>3287590</span></p>
+
+          <button class="know-more-btn" onclick="openModal()">Know More</button>
+        </div>
+      </div>
+
+      <!--Modal-->
+
+      <div class="modal-wrapper" id="modalWrapper">
+        <svg
+          onclick="closeModal()"
+          xmlns="http://www.w3.org/2000/svg"
+          width="36"
+          height="36"
+          viewBox="0 0 36 36"
+          fill="none"
+          class="close-icon"
+        >
+          <path
+            d="M26.5714 26.5714L9.42859 9.42856M26.5714 9.42856L9.42859 26.5714"
+            stroke="black"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        <div class="section-content-item">
+          <p><span>Country Name -</span> <span>Republic of India</span></p>
+          <p><span>Capital -</span> <span>New Delhi</span></p>
+          <p><span>Population -</span> <span>1380004385</span></p>
+          <p><span>Area -</span> <span>3287590</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!--Section 2-->
+    <section class="section section-dark" id="geography">
+      <h2 class="heading color-white">Geography</h2>
+      <p class="short-description">
+        Embark on a virtual journey through the geographical landscape. Discover
+        the terrain, natural features, and geographical intricacies that shape
+        the environment, providing insights into the physical context of our
+        subject.
+      </p>
+      <div class="section-flex-box">
+        <div class="section-content-item">
+          <p><span>Region -</span> <span>Asia</span></p>
+          <p><span>Subregion -</span> <span>Southern Asia</span></p>
+          <p><span>Coordinates -</span> <span>20' North and 77' East</span></p>
+        </div>
+
+        <div class="slider-container">
+          <h4 class="sub-heading color-white">Borders</h4>
+          <div class="slides">
+            <div class="slide">
+              <img src="https://flagcdn.com/w1280/in.png" />
+            </div>
+            <div class="slide"><img src="/assets/images/Nepal-flag.png" /></div>
+            <div class="slide">
+              <img src="/assets/images/Pakistan-flag.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Section 3-->
+    <section class="section section-light" id="demographics">
+      <div class="section-flex-box mt-0">
+        <div class="left-item">
+          <h2 class="heading color-white mb-40">DEMOGRAPHICS</h2>
+          <p><span>Currencies used -</span> <span>Indian rupee</span></p>
+          <p>
+            <span>Languages spoken -</span> <span>English, Hindi, Tamil</span>
+          </p>
+          <p><span>Population density -</span> <span></span></p>
+        </div>
+        <div class="left-item">
+          <h2 class="heading color-white mb-40">Goverment and politics</h2>
+          <p><span>Currencies used -</span> <span>Indian rupee</span></p>
+          <p>
+            <span>Languages spoken -</span> <span>English, Hindi, Tamil</span>
+          </p>
+          <p><span>Population density -</span> <span></span></p>
+        </div>
+      </div>
+    </section>
+
+    <!--Section 4-->
+
+    <section class="section section-4" id="miscellaneous">
+      <h2 class="heading">MISCELLaneous</h2>
+      <p class="short-description color-dark">
+        Explore a curated collection of miscellaneous topics, offering a diverse
+        array of intriguing insights. From unique traditions to interesting
+        anecdotes, this section serves as a delightful grab-bag of information,
+        adding a touch of variety to your exploration.
+      </p>
+      <div class="section-flex-box mt-80">
+        <div class="left-item">
+          <p><span>Currencies used -</span> <span>Indian rupee</span></p>
+          <p>
+            <span>Languages spoken -</span> <span>English, Hindi, Tamil</span>
+          </p>
+          <p><span>Population density -</span> <span></span></p>
+        </div>
+      </div>
+    </section>
+
+    <!--footer-->
+
+    <footer>
+      <ul class="nav footer-nav">
+        <li>
+          <a href="#" onclick="scrollIntoSection('basicInfo')"
+            >Basic Information</a
+          >
+        </li>
+        <li>
+          <a href="#" onclick="scrollIntoSection('geography')">Geography</a>
+        </li>
+        <li>
+          <a href="#" onclick="scrollIntoSection('demographics')"
+            >Demographics</a
+          >
+        </li>
+        <li>
+          <a href="#" onclick="scrollIntoSection('demographics')"
+            >Government and Politics</a
+          >
+        </li>
+        <li>
+          <a href="#" onclick="scrollIntoSection('miscellaneous')"
+            >Miscellaneous</a
+          >
+        </li>
+      </ul>
+      <ul class="social-icon">
+        <li>
+          <a href=""></a>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="58"
+              height="58"
+              viewBox="0 0 58 58"
+              fill="none"
+            >
+              <g clip-path="url(#clip0_63_18)">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M9.66665 28.9999C9.66699 25.2793 10.7409 21.6379 12.7595 18.5125C14.778 15.3871 17.6556 12.9106 21.0467 11.38C24.4379 9.84949 28.1987 9.32995 31.8778 9.88378C35.557 10.4376 38.9981 12.0413 41.7885 14.5023C44.5788 16.9634 46.5997 20.1773 47.6087 23.7584C48.6178 27.3396 48.5721 31.1358 47.4771 34.6916C46.3821 38.2474 44.2844 41.4117 41.4356 43.8049C38.5868 46.198 35.108 47.7183 31.4166 48.1834V33.8333H36.25C36.8909 33.8333 37.5056 33.5786 37.9588 33.1254C38.412 32.6722 38.6666 32.0575 38.6666 31.4166C38.6666 30.7756 38.412 30.161 37.9588 29.7077C37.5056 29.2545 36.8909 28.9999 36.25 28.9999H31.4166V24.1666C31.4166 23.5256 31.6713 22.911 32.1245 22.4577C32.5777 22.0045 33.1924 21.7499 33.8333 21.7499H35.0416C35.6826 21.7499 36.2973 21.4953 36.7505 21.0421C37.2037 20.5889 37.4583 19.9742 37.4583 19.3333C37.4583 18.6923 37.2037 18.0776 36.7505 17.6244C36.2973 17.1712 35.6826 16.9166 35.0416 16.9166H33.8333C31.9105 16.9166 30.0664 17.6804 28.7068 19.0401C27.3471 20.3997 26.5833 22.2438 26.5833 24.1666V28.9999H21.75C21.109 28.9999 20.4944 29.2545 20.0411 29.7077C19.5879 30.161 19.3333 30.7756 19.3333 31.4166C19.3333 32.0575 19.5879 32.6722 20.0411 33.1254C20.4944 33.5786 21.109 33.8333 21.75 33.8333H26.5833V48.1834C21.9112 47.5943 17.6146 45.3203 14.5 41.7883C11.3853 38.2563 9.66673 33.7091 9.66665 28.9999ZM29 53.1666C42.3472 53.1666 53.1666 42.3472 53.1666 28.9999C53.1666 15.6527 42.3472 4.83325 29 4.83325C15.6527 4.83325 4.83331 15.6527 4.83331 28.9999C4.83331 42.3472 15.6527 53.1666 29 53.1666Z"
+                  fill="white"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_63_18">
+                  <rect width="58" height="58" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </a>
+        </li>
+        <li><a href="">
+<svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54" fill="none">
+  <path d="M34.5375 12.4875C32.8278 12.4872 31.1863 13.158 29.966 14.3555C28.7458 15.553 28.0443 17.1816 28.0125 18.891L27.9495 22.4348C27.9461 22.6252 27.9025 22.8128 27.8214 22.9852C27.7404 23.1576 27.6238 23.3109 27.4793 23.435C27.3347 23.5591 27.1656 23.6512 26.9829 23.7053C26.8003 23.7594 26.6083 23.7742 26.4195 23.7488L22.905 23.2695C18.2857 22.6395 13.8577 20.5133 9.60748 16.974C8.26423 24.4215 10.89 29.5808 17.2192 33.561L21.15 36.0315C21.3364 36.1488 21.4913 36.3099 21.6012 36.5008C21.7111 36.6917 21.7726 36.9065 21.7804 37.1267C21.7881 37.3468 21.7419 37.5655 21.6458 37.7636C21.5496 37.9618 21.4064 38.1334 21.2287 38.2635L17.6467 40.8825C19.7775 41.0175 21.8002 40.923 23.4787 40.59C34.0942 38.4705 41.1525 30.483 41.1525 17.307C41.1525 16.2315 38.8732 12.4875 34.5375 12.4875ZM23.5125 18.81C23.5518 16.6411 24.23 14.532 25.4622 12.7468C26.6945 10.9615 28.426 9.57943 30.44 8.77359C32.454 7.96775 34.661 7.77394 36.7847 8.21644C38.9083 8.65895 40.8542 9.71809 42.3787 11.2613C43.9785 11.25 45.3397 11.655 48.3817 9.80776C47.6302 13.4978 47.2567 15.102 45.6525 17.3048C45.6525 34.497 35.0842 42.8603 24.3585 45C17.0077 46.467 6.31348 44.0573 3.25348 40.8555C4.81273 40.7363 11.1577 40.0545 14.8252 37.368C11.7202 35.3205 -0.627771 28.053 7.48798 8.51851C11.2972 12.9668 15.1605 15.993 19.0755 17.6018C21.6787 18.6705 22.32 18.648 23.5147 18.8123L23.5125 18.81Z" fill="white"/>
+</svg>
+
+        </a></li>
+        <li><a href="">
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54" fill="none">
+  <path d="M27.0023 20.25C25.212 20.25 23.4952 20.9612 22.2293 22.227C20.9634 23.4929 20.2523 25.2098 20.2523 27C20.2523 28.7902 20.9634 30.5071 22.2293 31.773C23.4952 33.0388 25.212 33.75 27.0023 33.75C28.7925 33.75 30.5094 33.0388 31.7752 31.773C33.0411 30.5071 33.7523 28.7902 33.7523 27C33.7523 25.2098 33.0411 23.4929 31.7752 22.227C30.5094 20.9612 28.7925 20.25 27.0023 20.25ZM27.0023 15.75C29.9859 15.75 32.8474 16.9353 34.9572 19.045C37.067 21.1548 38.2523 24.0163 38.2523 27C38.2523 29.9837 37.067 32.8452 34.9572 34.955C32.8474 37.0647 29.9859 38.25 27.0023 38.25C24.0186 38.25 21.1571 37.0647 19.0473 34.955C16.9375 32.8452 15.7523 29.9837 15.7523 27C15.7523 24.0163 16.9375 21.1548 19.0473 19.045C21.1571 16.9353 24.0186 15.75 27.0023 15.75ZM41.6273 15.1875C41.6273 15.9334 41.3309 16.6488 40.8035 17.1762C40.2761 17.7037 39.5607 18 38.8148 18C38.0688 18 37.3535 17.7037 36.826 17.1762C36.2986 16.6488 36.0023 15.9334 36.0023 15.1875C36.0023 14.4416 36.2986 13.7262 36.826 13.1988C37.3535 12.6713 38.0688 12.375 38.8148 12.375C39.5607 12.375 40.2761 12.6713 40.8035 13.1988C41.3309 13.7262 41.6273 14.4416 41.6273 15.1875ZM27.0023 9C21.4358 9 20.5268 9.01575 17.937 9.1305C16.173 9.21375 14.9895 9.45 13.8915 9.8775C12.9726 10.2149 12.1419 10.7556 11.4615 11.4592C10.7573 12.1396 10.2158 12.9703 9.87751 13.8892C9.45001 14.9917 9.21376 16.173 9.13276 17.9348C9.01576 20.4188 9.00001 21.2873 9.00001 27C9.00001 32.5688 9.01576 33.4755 9.13051 36.0652C9.21376 37.827 9.45001 39.0127 9.87526 40.1085C10.2578 41.0872 10.7078 41.7915 11.4548 42.5385C12.213 43.2945 12.9173 43.7467 13.8848 44.1202C14.9963 44.55 16.1798 44.7885 17.9348 44.8695C20.4188 44.9865 21.2873 45 27 45C32.5688 45 33.4755 44.9842 36.0653 44.8695C37.8248 44.7862 39.0083 44.55 40.1085 44.1247C41.0265 43.7857 41.8569 43.2452 42.5385 42.543C43.2968 41.787 43.749 41.0827 44.1225 40.113C44.55 39.006 44.7885 37.8225 44.8695 36.063C44.9865 33.5812 45 32.7105 45 27C45 21.4335 44.9843 20.5245 44.8695 17.9348C44.7863 16.1753 44.5478 14.9872 44.1225 13.8892C43.7834 12.9713 43.2429 12.141 42.5408 11.4592C41.8607 10.7547 41.0299 10.2131 40.1108 9.87525C39.0083 9.44775 37.8248 9.2115 36.0653 9.1305C33.5835 9.0135 32.7173 9 27.0023 9ZM27.0023 4.5C33.1155 4.5 33.8783 4.5225 36.279 4.635C38.673 4.7475 40.3065 5.12325 41.7398 5.68125C43.2248 6.25275 44.4758 7.02675 45.7268 8.2755C46.8709 9.40027 47.7562 10.7608 48.321 12.2625C48.8768 13.6957 49.2548 15.3292 49.3673 17.7255C49.473 20.124 49.5023 20.8867 49.5023 27C49.5023 33.1133 49.4798 33.876 49.3673 36.2745C49.2548 38.6707 48.8768 40.302 48.321 41.7375C47.7577 43.24 46.8722 44.6008 45.7268 45.7245C44.6017 46.8682 43.2412 47.7534 41.7398 48.3188C40.3065 48.8745 38.673 49.2525 36.279 49.365C33.8783 49.4708 33.1155 49.5 27.0023 49.5C20.889 49.5 20.1263 49.4775 17.7255 49.365C15.3315 49.2525 13.7003 48.8745 12.2648 48.3188C10.7625 47.7551 9.40169 46.8696 8.27776 45.7245C7.13348 44.5999 6.24817 43.2393 5.68351 41.7375C5.12551 40.3042 4.74976 38.6707 4.63726 36.2745C4.52926 33.876 4.50226 33.1133 4.50226 27C4.50226 20.8867 4.52476 20.124 4.63726 17.7255C4.74976 15.3292 5.12551 13.698 5.68351 12.2625C6.24654 10.7599 7.13207 9.39897 8.27776 8.2755C9.40202 7.13077 10.7627 6.24539 12.2648 5.68125C13.698 5.12325 15.3293 4.7475 17.7255 4.635C20.1263 4.52925 20.889 4.5 27.0023 4.5Z" fill="white"/>
+</svg>
+
+        </a></li>
+      </ul>
+    </footer>
+
+    <script type="text/javascript" src="/assets/js/script.js"></script>
+  </body>
+</html>
